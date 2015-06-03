@@ -31,7 +31,7 @@ function input_controller()
     $input = new Input($mysqli,$redis, $feed);
 
     require "Modules/input/process_model.php"; // 886
-    $process = new Process($mysqli,$input,$feed);
+    $process = new Process($mysqli,$input,$feed, null);
 
 
 
