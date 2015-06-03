@@ -27,3 +27,6 @@ Modules/heat
 Modules/app
 emoncms.log
 .idea
+runlock
+supervisord.log
+supervisord.pid
