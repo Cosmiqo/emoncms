@@ -19,10 +19,10 @@
     chdir("/var/www/emoncms");
 
     require "process_settings.php";
-    $mysqli = new mysqli($server,$username,$password,$database);
+    $mysqli = new mysqli("web",$username,$password,$database);
 
     $redis = new Redis();
-    $redis->connect("127.0.0.1");
+    $redis->connect("web");
 
     require("Modules/user/user_model.php");
     $user = new User($mysqli,$redis,null);
@@ -34,7 +34,7 @@
     $input = new Input($mysqli,$redis, $feed);
 
     require "Modules/input/process_model.php"; // 886
-    $process = new Process($mysqli,$input,$feed);
+    $process = new Process($mysqli,$input,$feed,null);
 
     $rn = 0;
     $ltime = time();
