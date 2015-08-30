@@ -20,7 +20,7 @@ global $path, $allowusersregister, $enable_rememberme, $enable_password_reset;
 
 <div style="margin: 0px auto; max-width:392px; padding:10px;">
     <div style="max-width:392px; margin-right:20px; padding-top:45px; padding-bottom:15px; color: #888;">
-        <img style="margin:12px;" src="<?php echo $path; ?>Theme/emoncms_logo.png" alt="Emoncms" width="256" height="46" />
+        <img style="margin:12px;" src="<?php echo $path; ?>Theme/ACMS.png" alt="ACMS" width="256" height="46" />
     </div>
 
     <div class="login-container">
@@ -66,7 +66,7 @@ global $path, $allowusersregister, $enable_rememberme, $enable_password_reset;
             <p>
                 <a id="passwordreset-link" href="#">Forgotten password</a>
             </p>
-            
+
             <div id="passwordreset-block" style="display:none">
                 <hr>
                 <div id="passwordreset-message"></div>
@@ -116,7 +116,7 @@ $(document).ready(function() {
     $("#passwordreset-submit").click(function(){
         var username = $("#passwordreset-username").val();
         var email = $("#passwordreset-email").val();
-        
+
         if (email==="" || username==="") {
             $("#error-passwordreset").text("Please enter username and email address").show();
         } else {
